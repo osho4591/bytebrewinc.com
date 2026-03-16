@@ -26,6 +26,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ByteBrew Inc",
+    "url": "https://bytebrewinc.com",
+    "logo": "https://bytebrewinc.com/assets/images/favicon.svg",
+    "email": "hello@bytebrewinc.com",
+    "description": "ByteBrew Inc crafts high-quality web applications, APIs, and developer tools — from idea to production.",
+    "sameAs": ["https://github.com/osho4591"],
+    "serviceType": ["Web Application Development", "API Development", "Cloud DevOps", "AI Integration"]
+  }
+  </script>
 </head>
 <body>
 
@@ -42,6 +57,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#process">Process</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#testimonials">Clients</a></li>
         <li><a href="#contact" class="nav__cta">Get in Touch</a></li>
       </ul>
@@ -301,6 +317,64 @@
             <p>Careful deployment with monitoring in place. We don't disappear after launch.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Portfolio -->
+  <section class="work section" id="work">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Featured Work</div>
+        <h2 class="section-title">Things we've built</h2>
+        <p class="section-subtitle">A selection of recent projects across industries.</p>
+      </div>
+      <div class="work__grid">
+        <article class="work-card work-card--wide">
+          <div class="work-card__content">
+            <div class="work-card__tags">
+              <span>Next.js</span><span>Go</span><span>PostgreSQL</span>
+            </div>
+            <h3>Real-time Analytics Dashboard</h3>
+            <p>End-to-end rebuild of a legacy BI platform into a fast, multi-tenant analytics SaaS. 40 ms median query time on 50 M+ rows.</p>
+            <div class="work-card__metrics">
+              <div class="work-metric"><span>40ms</span>median query</div>
+              <div class="work-metric"><span>99.9%</span>uptime SLA</div>
+              <div class="work-metric"><span>12 wks</span>to launch</div>
+            </div>
+          </div>
+          <div class="work-card__visual work-card__visual--blue"></div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-card__content">
+            <div class="work-card__tags">
+              <span>Node.js</span><span>Redis</span><span>AWS</span>
+            </div>
+            <h3>Payment Processing API</h3>
+            <p>High-throughput payments API handling 3 k+ TPS with idempotency, retries, and PCI-DSS compliance.</p>
+            <div class="work-card__metrics">
+              <div class="work-metric"><span>3k+</span>TPS</div>
+              <div class="work-metric"><span>PCI</span>compliant</div>
+            </div>
+          </div>
+          <div class="work-card__visual work-card__visual--amber"></div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-card__content">
+            <div class="work-card__tags">
+              <span>React</span><span>Python</span><span>OpenAI</span>
+            </div>
+            <h3>AI Document Review Tool</h3>
+            <p>LLM-powered tool that reviews legal documents, flags risks, and drafts summaries — cutting review time by 70%.</p>
+            <div class="work-card__metrics">
+              <div class="work-metric"><span>70%</span>faster review</div>
+              <div class="work-metric"><span>RAG</span>powered</div>
+            </div>
+          </div>
+          <div class="work-card__visual work-card__visual--green"></div>
+        </article>
       </div>
     </div>
   </section>

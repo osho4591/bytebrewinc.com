@@ -31,7 +31,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.service-card, .process__step, .value, .about__visual, .testimonial-card')
+document.querySelectorAll('.service-card, .process__step, .value, .about__visual, .testimonial-card, .work-card')
   .forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
