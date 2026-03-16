@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ByteBrew Inc — Crafting software that scales. We build modern web applications, APIs, and developer tools." />
+  <title>ByteBrew Inc — Crafting Software That Scales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#" class="nav__logo">
+        <span class="logo-byte">Byte</span><span class="logo-brew">Brew</span><span class="logo-inc"> Inc</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact" class="nav__cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__container">
+      <div class="hero__badge">Est. 2024</div>
+      <h1 class="hero__title">
+        We <span class="gradient-text">Brew</span><br />
+        Great Software
+      </h1>
+      <p class="hero__subtitle">
+        ByteBrew Inc crafts high-quality web applications, APIs, and developer
+        tools — from idea to production, with precision and care.
+      </p>
+      <div class="hero__actions">
+        <a href="#services" class="btn btn--primary">Explore Services</a>
+        <a href="#contact" class="btn btn--ghost">Start a Project</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__value">50+</span>
+          <span class="stat__label">Projects Shipped</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__value">98%</span>
+          <span class="stat__label">Client Satisfaction</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__value">24h</span>
+          <span class="stat__label">Avg Response Time</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>React</span><span>·</span>
+      <span>Node.js</span><span>·</span>
+      <span>TypeScript</span><span>·</span>
+      <span>Go</span><span>·</span>
+      <span>PostgreSQL</span><span>·</span>
+      <span>Redis</span><span>·</span>
+      <span>Docker</span><span>·</span>
+      <span>Kubernetes</span><span>·</span>
+      <span>AWS</span><span>·</span>
+      <span>GraphQL</span><span>·</span>
+      <span>REST APIs</span><span>·</span>
+      <span>Next.js</span><span>·</span>
+      <span>React</span><span>·</span>
+      <span>Node.js</span><span>·</span>
+      <span>TypeScript</span><span>·</span>
+      <span>Go</span><span>·</span>
+      <span>PostgreSQL</span><span>·</span>
+      <span>Redis</span><span>·</span>
+      <span>Docker</span><span>·</span>
+      <span>Kubernetes</span><span>·</span>
+      <span>AWS</span><span>·</span>
+      <span>GraphQL</span><span>·</span>
+      <span>REST APIs</span><span>·</span>
+      <span>Next.js</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__content">
+          <div class="section-tag">About Us</div>
+          <h2 class="section-title">Software crafted with purpose</h2>
+          <p class="about__text">
+            At ByteBrew, we believe great software is brewed slowly — with the right
+            ingredients, thoughtful architecture, and an obsession with quality. We're
+            a small team of engineers who care deeply about what we build.
+          </p>
+          <p class="about__text">
+            We work with startups and growing businesses to deliver reliable, scalable
+            solutions that make a real difference.
+          </p>
+          <div class="about__values">
+            <div class="value">
+              <div class="value__icon">⚡</div>
+              <div>
+                <strong>Performance First</strong>
+                <p>We optimize for speed at every layer of the stack.</p>
+              </div>
+            </div>
+            <div class="value">
+              <div class="value__icon">🔒</div>
+              <div>
+                <strong>Secure by Default</strong>
+                <p>Security is built in, not bolted on.</p>
+              </div>
+            </div>
+            <div class="value">
+              <div class="value__icon">📐</div>
+              <div>
+                <strong>Clean Architecture</strong>
+                <p>Code you can maintain and evolve with confidence.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__visual">
+          <div class="code-card">
+            <div class="code-card__header">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="code-card__title">bytebrew.ts</span>
+            </div>
+            <pre class="code-card__body"><code><span class="c-purple">const</span> <span class="c-blue">ByteBrew</span> <span class="c-white">= {</span>
+  <span class="c-teal">mission</span><span class="c-white">:</span> <span class="c-green">"Craft software"</span><span class="c-white">,</span>
+         <span class="c-green">  + " that scales"</span><span class="c-white">,</span>
+
+  <span class="c-teal">values</span><span class="c-white">: [</span>
+    <span class="c-green">"quality"</span><span class="c-white">,</span>
+    <span class="c-green">"simplicity"</span><span class="c-white">,</span>
+    <span class="c-green">"reliability"</span>
+  <span class="c-white">],</span>
+
+  <span class="c-teal">ship</span><span class="c-white">:</span> <span class="c-purple">async</span> <span class="c-white">() =&gt; {</span>
+    <span class="c-purple">await</span> <span class="c-blue">brew</span><span class="c-white">(</span><span class="c-green">"🍺"</span><span class="c-white">);</span>
+    <span class="c-purple">return</span> <span class="c-green">"production"</span><span class="c-white">;</span>
+  <span class="c-white">}</span>
+<span class="c-white">};</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-title">Services</h2>
+        <p class="section-subtitle">End-to-end software development, from concept to deployment.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon">🌐</div>
+          <h3>Web Applications</h3>
+          <p>Modern, fast, and accessible web apps built with React, Next.js, and TypeScript. From MVPs to enterprise-scale products.</p>
+          <ul class="service-card__list">
+            <li>SPA &amp; SSR applications</li>
+            <li>Admin dashboards</li>
+            <li>E-commerce platforms</li>
+          </ul>
+        </div>
+        <div class="service-card service-card--featured">
+          <div class="service-card__badge">Popular</div>
+          <div class="service-card__icon">⚙️</div>
+          <h3>Backend &amp; APIs</h3>
+          <p>Robust, well-documented APIs and microservices built with Node.js or Go. Designed for scale from day one.</p>
+          <ul class="service-card__list">
+            <li>REST &amp; GraphQL APIs</li>
+            <li>Microservices architecture</li>
+            <li>Database design &amp; optimization</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">☁️</div>
+          <h3>Cloud &amp; DevOps</h3>
+          <p>CI/CD pipelines, containerization, and cloud infrastructure that keeps your app running smoothly.</p>
+          <ul class="service-card__list">
+            <li>AWS / GCP deployment</li>
+            <li>Docker &amp; Kubernetes</li>
+            <li>Monitoring &amp; alerting</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🔍</div>
+          <h3>Code Review &amp; Audits</h3>
+          <p>Expert review of your existing codebase — security, performance, and architecture recommendations.</p>
+          <ul class="service-card__list">
+            <li>Security audits</li>
+            <li>Performance profiling</li>
+            <li>Architecture review</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">📱</div>
+          <h3>Developer Tools</h3>
+          <p>CLIs, SDKs, and internal tools that make your team's workflow faster and more productive.</p>
+          <ul class="service-card__list">
+            <li>CLI applications</li>
+            <li>SDKs &amp; libraries</li>
+            <li>Internal tooling</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">🧠</div>
+          <h3>AI Integration</h3>
+          <p>Integrate AI capabilities into your product — from LLM-powered features to custom ML pipelines.</p>
+          <ul class="service-card__list">
+            <li>LLM API integration</li>
+            <li>AI-powered features</li>
+            <li>RAG &amp; embeddings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">How We Work</div>
+        <h2 class="section-title">Our Brew Process</h2>
+        <p class="section-subtitle">Simple, transparent, and collaborative — from kickoff to launch.</p>
+      </div>
+      <div class="process__steps">
+        <div class="process__step">
+          <div class="step__number">01</div>
+          <div class="step__content">
+            <h3>Discovery</h3>
+            <p>We start by understanding your goals, constraints, and users. No assumptions — just good questions.</p>
+          </div>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step">
+          <div class="step__number">02</div>
+          <div class="step__content">
+            <h3>Design &amp; Architecture</h3>
+            <p>We map out the technical architecture and UI flows before writing a single line of code.</p>
+          </div>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step">
+          <div class="step__number">03</div>
+          <div class="step__content">
+            <h3>Build &amp; Iterate</h3>
+            <p>Agile sprints with regular check-ins. You see progress early and often.</p>
+          </div>
+        </div>
+        <div class="process__connector"></div>
+        <div class="process__step">
+          <div class="step__number">04</div>
+          <div class="step__content">
+            <h3>Launch &amp; Support</h3>
+            <p>Careful deployment with monitoring in place. We don't disappear after launch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__content">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="section-title">Let's brew something together</h2>
+          <p>Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you within 24 hours.</p>
+          <div class="contact__links">
+            <a href="mailto:hello@bytebrewinc.com" class="contact__link">
+              <span class="contact__link-icon">✉️</span>
+              hello@bytebrewinc.com
+            </a>
+            <a href="https://github.com/bytebrewinc" class="contact__link" target="_blank" rel="noopener">
+              <span class="contact__link-icon">🐙</span>
+              github.com/bytebrewinc
+            </a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message →</button>
+          <p class="form-note">We respond within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="logo-byte">Byte</span><span class="logo-brew">Brew</span><span class="logo-inc"> Inc</span>
+          </a>
+          <p>Crafting software that scales.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#process">Process</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="mailto:hello@bytebrewinc.com">Email</a></li>
+              <li><a href="https://github.com/bytebrewinc" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 ByteBrew Inc. All rights reserved.</p>
+        <p>Built with ☕ and code.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
