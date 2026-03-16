@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | ByteBrew Inc</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0b0f;
+      color: #e8eaf0;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+    }
+    .code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(80px, 15vw, 140px);
+      font-weight: 800;
+      background: linear-gradient(135deg, #f59e0b, #fb923c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+    h1 { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+    p { color: #8b8fa8; margin-bottom: 32px; max-width: 360px; }
+    a {
+      display: inline-block;
+      background: linear-gradient(135deg, #f59e0b, #fb923c);
+      color: #0a0b0f;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    a:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="code">404</div>
+    <h1>Page not found</h1>
+    <p>Looks like this brew doesn't exist. Let's get you back to something that does.</p>
+    <a href="/">Back to ByteBrew</a>
+  </div>
+</body>
+</html>
