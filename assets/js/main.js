@@ -43,36 +43,11 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.service-card, .process__step, .value, .about__visual, .testimonial-card, .work-card')
+document.querySelectorAll('.service-card, .process__step, .value, .about__visual')
   .forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
   });
-
-// Contact form — submits to Formspree if configured; shows demo message otherwise
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', (e) => {
-  const action = form.getAttribute('action') || '';
-  const isPlaceholder = action.includes('YOUR_FORM_ID');
-
-  if (isPlaceholder) {
-    // Demo mode: show success message without actually submitting
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-    setTimeout(() => {
-      form.innerHTML = `
-        <div style="text-align:center; padding: 48px 0;">
-          <div style="font-size:48px; margin-bottom:16px;">✅</div>
-          <h3 style="font-size:22px; margin-bottom:8px;">Message received!</h3>
-          <p style="color:var(--text-muted)">We'll get back to you within 24 hours.</p>
-        </div>
-      `;
-    }, 800);
-  }
-  // If Formspree is configured, the form submits normally via POST
-});
 
 // Typewriter animation in hero
 (function typewriter() {
