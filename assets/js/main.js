@@ -2,6 +2,10 @@
 // ByteBrew Inc — Main JavaScript
 // ============================================================
 
+// Dynamic copyright year
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 // Nav scroll effect + back-to-top visibility
 const nav        = document.getElementById('nav');
 const backToTop  = document.getElementById('backToTop');
