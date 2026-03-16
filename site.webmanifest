@@ -1,0 +1,17 @@
+{
+  "name": "ByteBrew Inc",
+  "short_name": "ByteBrew",
+  "description": "Crafting software that scales.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0b0f",
+  "theme_color": "#f59e0b",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

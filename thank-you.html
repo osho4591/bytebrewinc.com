@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Thanks! — ByteBrew Inc</title>
+  <meta name="theme-color" content="#f59e0b" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0b0f;
+      color: #e8eaf0;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+    }
+    .icon {
+      font-size: 64px;
+      margin-bottom: 24px;
+      animation: pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+    .accent {
+      background: linear-gradient(135deg, #f59e0b, #fb923c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    p {
+      color: #8b8fa8;
+      font-size: 18px;
+      max-width: 420px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    a {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #f59e0b, #fb923c);
+      color: #0a0b0f;
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-ghost {
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #8b8fa8;
+    }
+    .btn-ghost:hover { color: #e8eaf0; border-color: rgba(255,255,255,0.2); }
+    .eta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: #8b8fa8;
+      margin-top: 32px;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 8px 20px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="icon">🍺</div>
+  <h1>Message <span class="accent">received!</span></h1>
+  <p>Thanks for reaching out. We'll review your project and get back to you within 24 hours.</p>
+  <div class="actions">
+    <a href="/" class="btn-primary">Back to ByteBrew</a>
+    <a href="/#services" class="btn-ghost">Browse Services</a>
+  </div>
+  <div class="eta">⏱ Expected reply: within 24 hours</div>
+</body>
+</html>
