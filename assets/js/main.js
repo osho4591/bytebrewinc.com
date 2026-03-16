@@ -2,11 +2,19 @@
 // ByteBrew Inc — Main JavaScript
 // ============================================================
 
-// Nav scroll effect
-const nav = document.getElementById('nav');
+// Nav scroll effect + back-to-top visibility
+const nav        = document.getElementById('nav');
+const backToTop  = document.getElementById('backToTop');
+
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
+  const y = window.scrollY;
+  nav.classList.toggle('scrolled', y > 40);
+  backToTop.classList.toggle('visible', y > 500);
 }, { passive: true });
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
@@ -37,26 +45,29 @@ document.querySelectorAll('.service-card, .process__step, .value, .about__visual
     observer.observe(el);
   });
 
-// Contact form — simple UX (no backend; show friendly message)
+// Contact form — submits to Formspree if configured; shows demo message otherwise
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  const original = btn.textContent;
+  const action = form.getAttribute('action') || '';
+  const isPlaceholder = action.includes('YOUR_FORM_ID');
 
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
-
-  // Simulate a brief pause (replace with real API call)
-  setTimeout(() => {
-    form.innerHTML = `
-      <div style="text-align:center; padding: 48px 0;">
-        <div style="font-size:48px; margin-bottom:16px;">✅</div>
-        <h3 style="font-size:22px; margin-bottom:8px;">Message received!</h3>
-        <p style="color:var(--text-muted)">We'll get back to you within 24 hours.</p>
-      </div>
-    `;
-  }, 800);
+  if (isPlaceholder) {
+    // Demo mode: show success message without actually submitting
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    setTimeout(() => {
+      form.innerHTML = `
+        <div style="text-align:center; padding: 48px 0;">
+          <div style="font-size:48px; margin-bottom:16px;">✅</div>
+          <h3 style="font-size:22px; margin-bottom:8px;">Message received!</h3>
+          <p style="color:var(--text-muted)">We'll get back to you within 24 hours.</p>
+        </div>
+      `;
+    }, 800);
+  }
+  // If Formspree is configured, the form submits normally via POST
 });
 
 // Typewriter animation in hero

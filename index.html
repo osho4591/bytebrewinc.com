@@ -44,6 +44,12 @@
 </head>
 <body>
 
+  <!-- Skip navigation for accessibility -->
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__container">
@@ -68,7 +74,12 @@
   <section class="hero" id="hero">
     <div class="hero__bg"></div>
     <div class="hero__container">
-      <div class="hero__badge">Est. 2024</div>
+      <div class="hero__badges">
+        <div class="hero__badge">Est. 2024</div>
+        <div class="hero__badge hero__badge--available">
+          <span class="avail-dot"></span> Accepting new projects
+        </div>
+      </div>
       <h1 class="hero__title">
         We <span class="gradient-text">Brew</span><br />
         <span id="heroTyped" class="hero__typed"></span>
@@ -444,7 +455,8 @@
             </a>
           </div>
         </div>
-        <form class="contact__form" id="contactForm">
+        <!-- Formspree: replace YOUR_FORM_ID with your ID from formspree.io -->
+        <form class="contact__form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -457,6 +469,9 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
           </div>
+          <input type="hidden" name="_subject" value="New project inquiry — ByteBrew Inc" />
+          <input type="hidden" name="_next" value="https://bytebrewinc.com/#contact" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <button type="submit" class="btn btn--primary btn--full">Send Message →</button>
           <p class="form-note">We respond within 24 hours.</p>
         </form>
