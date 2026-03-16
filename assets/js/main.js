@@ -31,7 +31,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.service-card, .process__step, .value, .about__visual')
+document.querySelectorAll('.service-card, .process__step, .value, .about__visual, .testimonial-card')
   .forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
@@ -58,6 +58,25 @@ form.addEventListener('submit', (e) => {
     `;
   }, 800);
 });
+
+// Typewriter animation in hero
+(function typewriter() {
+  const el = document.getElementById('heroTyped');
+  if (!el) return;
+  const words = ['Great Software', 'Web Apps', 'Fast APIs', 'Dev Tools', 'AI Products'];
+  let wi = 0, ci = 0, deleting = false;
+
+  function tick() {
+    const word = words[wi];
+    el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+
+    let delay = deleting ? 60 : 100;
+    if (!deleting && ci > word.length) { delay = 1800; deleting = true; }
+    else if (deleting && ci < 0)       { deleting = false; ci = 0; wi = (wi + 1) % words.length; delay = 300; }
+    setTimeout(tick, delay);
+  }
+  setTimeout(tick, 600);
+})();
 
 // Smooth scroll offset for fixed nav
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
